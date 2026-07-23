@@ -1,0 +1,150 @@
+/* Christian Enlightenment - Main Style */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: #050814;
+    line-height: 1.6;
+}
+
+/* Starry background with cross and birds */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 20% 20%, white 1px, transparent 2px),
+        radial-gradient(circle at 80% 30%, white 1px, transparent 2px),
+        radial-gradient(circle at 40% 70%, white 1px, transparent 2px),
+        linear-gradient(
+            rgba(0,0,20,0.85),
+            rgba(0,0,40,0.95)
+        );
+    background-size: 180px 180px, 250px 250px, 300px 300px, cover;
+}
+
+/* Cross in background */
+.cross {
+    position: fixed;
+    right: 12%;
+    bottom: 15%;
+    width: 60px;
+    height: 180px;
+    background: rgba(255,255,255,0.15);
+    z-index: -1;
+}
+
+.cross::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    background: rgba(255,255,255,0.15);
+    left: -60px;
+    top: 50px;
+}
+
+/* Flying birds */
+.birds {
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    font-size: 35px;
+    letter-spacing: 40px;
+    opacity: 0.5;
+    z-index: -1;
+    animation: fly 20s linear infinite;
+}
+
+@keyframes fly {
+    from {
+        transform: translateX(-20%);
+    }
+
+    to {
+        transform: translateX(120%);
+    }
+}
+
+
+header {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #c9d8ff;
+    font-size: 20px;
+}
+
+
+nav {
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: #87ceff;
+}
+
+
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+
+.card {
+    background: rgba(255,255,255,0.08);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(5px);
+}
+
+
+h2 {
+    color: #8fd3ff;
+}
+
+
+.button {
+    display: inline-block;
+    background: #315cff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+
+.button:hover {
+    background: #5278ff;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0,0,0,0.8);
+    color: #aaa;
+}
