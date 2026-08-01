@@ -29,6 +29,27 @@ body::before {
     background-size: 180px 180px, 250px 250px, 300px 300px, cover;
 }
 
+/* Moving galaxy background */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse 800px 600px at 30% 40%, rgba(100, 200, 255, 0.1) 0%, transparent 70%),
+        radial-gradient(ellipse 600px 500px at 70% 60%, rgba(150, 100, 255, 0.08) 0%, transparent 70%);
+    animation: galaxy-move 120s linear infinite;
+}
+
+@keyframes galaxy-move {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
 /* Cross in background */
 .cross {
     position: fixed;
