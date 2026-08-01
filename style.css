@@ -38,12 +38,16 @@ body::after {
     background:
         radial-gradient(ellipse 800px 600px at 30% 40%, rgba(100, 200, 255, 0.1) 0%, transparent 70%),
         radial-gradient(ellipse 600px 500px at 70% 60%, rgba(150, 100, 255, 0.08) 0%, transparent 70%);
+    background-size: 200% 200%;
     animation: galaxy-move 120s linear infinite;
 }
 
 @keyframes galaxy-move {
     0% {
         background-position: 0% 0%;
+    }
+    50% {
+        background-position: 50% 50%;
     }
     100% {
         background-position: 100% 100%;
